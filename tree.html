@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tree</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="ps-stylesheet.css" media="all">
+<link rel="stylesheet" type="text/css" href="headercss.css" media="all">
+<script type="text/javascript" src="ps-script.js"></script>
+</head>
+
+<body>
+<div align="center"><img src="index.png" alt="Sona">
+<li style="float:right"><a href="login.php" > Student Login</a> |<a href="signup.php">Sign up</a></li>
+</div>
+<ul>
+  <li><a href="success.php">Home</a></li>
+  <li class="dropdown">
+    <a href="courses.html">Courses</a>
+    <div class="dropdown-content">
+      <a href="DS.php">Data Structure</a>
+      <a href="DAA.php">Data Analysis And Algorithm</a>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="online.html">Online Test</a>
+    <div class="dropdown-content">
+      <a href="dsQuiz.php">Data Structure</a>
+      <a href="daaQuiz.php">Data Analysis And Algorithm</a>
+    </div>
+  </li>
+  <li><a href="intro.html">Info</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="college.html">College Profile</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+
+<div style="float:left;width:20%;height:1000px" class="scroll" >
+  <center><h1 style="color:black"><b>MENU</b></h1>
+  <a href="DS.php" >DS</a><br>
+  <a href="DAA.php">DAA</a><br>
+  <a href="quiz.php">Quiz</a><br>
+  <a href="cert.php">Certificate</a><br>
+</center>
+</div>
+<div style="float:left;width:50%;">
+<div class="article">
+<h1>AVL Rotations</h1>
+<p>
+To make itself balanced, an AVL tree may perform four kinds of rotations -
+</p>
+<ul>
+    <li>Left rotation<br>
+   <li>Right rotation<br>
+    <li>Left-Right rotation<br>
+    <li>Right-Left rotation<br>
+</ul><br>
+First two rotations are single rotations and next two rotations are double rotations. Two have an unbalanced tree we at least need a tree of height 2. With this simple tree, let's understand them one by one.<br><br>
+Left Rotation<br>
+
+If a tree become unbalanced, when a node is inserted into the right subtree of right subtree, then we perform single left rotation -
+Left Rotation<br>
+
+In our example, node A has become unbalanced as a node is inserted in right subtree of A's right subtree. We perform left rotation by making A left-subtree of B.<br><br>
+Right Rotation
+<br>
+AVL tree may become unbalanced if a node is inserted in the left subtree of left subtree. The tree then needs a right rotation.
+<br>Right Rotation
+<br>
+As depicted, the unbalanced node becomes right child of its left child by performing a right rotation.
+<br>Left-Right Rotation
+<br>
+Double rotations are slightly complex version of already explained versions of rotations. To understand them better, we should take note of each action performed while rotation. Let's first check how to perform Left-Right rotation. A left-right rotation is combination of left rotation followed by right rotation.<br>
+State 	Action<br>
+Right Rotation 	A node has been inserted into right subtree of left subtree. This makes C an unbalanced node. These scenarios cause AVL tree to perform left-right rotation.
+	<br>
+Left Rotation 	We first perform left rotation on left subtree of C. This makes A, left subtree of B.
+	<br>
+Left Rotation 	Node C is still unbalanced but now, it is because of left-subtree of left-subtree.
+	<br>
+Right Rotation 	We shall now right-rotate the tree making B new root node of this subtree. C now becomes right subtree of its own left subtree.
+	<br>
+Balanced Avl Tree 	The tree is now balanced.<br>
+Right-Left Rotation
+<br>
+Second type of double rotation is Right-Left Rotation. It is a combination of right rotation followed by left rotation.
+State 	Action<br>
+Left Subtree of Right Subtree 	A node has been inserted into left subtree of right subtree. This makes A an unbalanced node, with balance factor 2.<br>
+	
+Subtree Right Rotation 	First, we perform right rotation along C node, making C the right subtree of its own left subtree B. Now, B becomes right subtree of A.<br>
+	
+Right Unbalanced Tree 	Node A is still unbalanced because of right subtree of its right subtree and requires a left rotation.
+	<br>
+Left Rotation 	A left rotation is performed by making B the new root node of the subtree. A becomes left subtree of its right subtree B.
+	<br>
+Balanced AVL Tree 	The tree is now balanced.
+</div>
+</body>
+</html>

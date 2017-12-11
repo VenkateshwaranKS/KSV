@@ -1,0 +1,234 @@
+﻿<html>
+<head>
+<title>  </title>
+<link rel="stylesheet" type="text/css" href="ps-stylesheet.css" media="all">
+
+<style >
+h1{
+  background-color:black;
+
+}
+h3{
+  background-color:pink;
+}
+</style>
+</head>
+<body >
+<h1 style="color:white"><marquee scroll="left">SORTING</marquee></h1>
+Bubble Sort is an elementary sorting algorithm. It works by repeatedly exchanging adjacent elements, if necessary. When no exchanges are required, the file is sorted.<br><br>
+
+ 
+
+                SEQUENTIAL BUBBLESORT (A)<br><br>
+
+
+                    for i ← 1 to length [A] do<br><br>
+
+                        for j ← length [A] downto i +1 do<br><br>
+
+                            If A[A] < A[j-1] then<br><br>
+
+                                Exchange A[j] ↔ A[j-1]<br><br>
+
+
+ 
+
+ 
+
+Here the number of comparison made<br><br>
+
+
+            1 + 2 + 3 + . . . + (n - 1) = n(n - 1)/2 = O(n2)<br><br>
+
+
+ 
+
+ 
+
+ 
+
+Clearly, the graph shows the n2 nature of the bubble sort.<br><br>
+
+
+In this algorithm the number of comparison is irrespective of data set i.e., input whether best or worst.<br><br>
+ 
+Memory Requirement<br><br>
+
+
+Clearly, bubble sort does not require extra memory.<br><br>
+
+ 
+ 
+Implementation<br><br>
+
+
+                 
+
+                void bubbleSort(int numbers[], int array_size)<br><br>
+
+                {<br><br>
+
+                  int i, j, temp;<br><br>
+
+
+                  for (i = (array_size - 1); i >= 0; i--)<br><br>
+
+                  {<br><br>
+
+                    for (j = 1; j <= i; j++)<br><br>
+
+                    {<br><br>
+
+                      if (numbers[j-1] > numbers[j])<br><br>
+
+                      {<br><br>
+
+                        temp = numbers[j-1];<br><br>
+
+                        numbers[j-1] = numbers[j];<br><br>
+
+                        numbers[j] = temp;<br><br>
+
+                      }<br><br>
+
+                    }<br><br>
+
+                  }<br><br>
+
+                }<br><br>
+
+
+<h1> insertion</h1>
+Algorithm: Insertion Sort<br><br>
+
+
+It works the way you might sort a hand of playing cards:<br><br>
+
+
+    We start with an empty left hand [sorted array] and the cards face down on the table [unsorted array].<br><br>
+
+
+    Then remove one card [key] at a time from the table [unsorted array], and insert it into the correct position in the left hand [sorted array].<br><br>
+
+
+    To find the correct position for the card, we compare it with each of the cards already in the hand, from right to left.<br><br>
+
+
+Note that at all times, the cards held in the left hand are sorted, and these cards were originally the top cards of the pile on the table.<br><br>
+
+
+ 
+
+Pseudocode<br><br>
+
+
+We use a procedure INSERTION_SORT. It takes as parameters an array A[1.. n] and the length n of the array. The array A is sorted in place: the numbers are rearranged within the array, with at most a constant number outside the array at any time.<br><br>
+
+
+ 
+
+INSERTION_SORT (A)<br><br>
+
+
+1.     FOR j ← 2 TO length[A]<br><br>
+
+2.             DO  key ← A[j]   <br><br>
+
+3.                   {Put A[j] into the sorted sequence A[1 . . j − 1]}  <br><br>
+
+4.                    i ← j − 1   <br><br>
+
+5.                    WHILE i > 0 and A[i] > key<br><br>
+
+6.                                 DO A[i +1] ← A[i]           <br><br>
+
+7.                                         i ← i − 1    <br><br>
+
+8.                     A[i + 1] ← key<br><br>
+
+
+ 
+
+Example: Following figure (from CLRS) shows the operation of INSERTION-SORT on the array A= (5, 2, 4, 6, 1, 3). Each part shows what happens for a particular iteration with the value of j indicated. j indexes the "current card" being inserted into the hand.
+<br><br>
+
+The operation of INSERTION-SORT on the array A = <5, 2, 4, 6, 1, 3><br><br>
+
+
+Read the figure row by row. Elements to the left of A[j] that are greater than A[j] move one position to the right, and A[j] moves into the evacuated position.<br><br>
+
+
+<h1> MERGE</h1>
+Merge sort is based on the divide-and-conquer paradigm. Its worst-case running time has a lower order of growth than insertion sort. Since we are dealing with subproblems, we state each subproblem as sorting a subarray A[p .. r]. Initially, p = 1 and r = n, but these values change as we recurse through subproblems.<br><br>
+
+
+To sort A[p .. r]:<br><br>
+
+
+1. Divide Step<br><br>
+
+
+If a given array A has zero or one element, simply return; it is already sorted. Otherwise, split A[p .. r] into two subarrays A[p .. q] and A[q + 1 .. r], each containing about half of the elements of A[p .. r]. That is, q is the halfway point of A[p .. r].<br><br>
+<br><br>
+
+
+2. Conquer Step<br><br>
+
+
+Conquer by recursively sorting the two subarrays A[p .. q] and A[q + 1 .. r].<br><br>
+
+
+3. Combine Step<br><br>
+
+
+Combine the elements back in A[p .. r] by merging the two sorted subarrays A[p .. q] and A[q + 1 .. r] into a sorted sequence. To accomplish this step, we will define a procedure MERGE (A, p, q, r).<br><br>
+
+
+Note that the recursion bottoms out when the subarray has just one element, so that it is trivially sorted.<br><br>
+
+
+ 
+
+Algorithm: Merge Sort
+<br><br>
+
+To sort the entire sequence A[1 .. n], make the initial call  to the procedure MERGE-SORT (A, 1, n).<br><br>
+
+
+MERGE-SORT (A, p, r)<br><br>
+
+
+1.     IF p < r                                                    // Check for base case<br><br>
+
+2.         THEN q = FLOOR[(p + r)/2]                 // Divide step<br><br>
+
+3.                 MERGE (A, p, q)                          // Conquer step.<br><br>
+
+4.                 MERGE (A, q + 1, r)                     // Conquer step.<br><br>
+
+5.                 MERGE (A, p, q, r)                       // Conquer step.<br><br>
+
+
+
+Example: Bottom-up view of the above procedure for n = 8.<br><br>
+
+
+ 
+
+Merging<br><br>
+
+
+What remains is the MERGE procedure. The following is the input and output of the MERGE procedure.<br><br>
+
+
+INPUT: Array A and indices p, q, r such that p ≤ q ≤ r and subarray A[p .. q] is sorted and subarray A[q + 1 .. r] is sorted. By restrictions on p, q, r, neither subarray is empty.<br><br>
+
+
+OUTPUT: The two subarrays are merged into a single sorted subarray in A[p .. r].<br><br>
+
+
+We implement it so that it takes Θ(n) time, where n = r − p + 1, which is the number of elements being merged.<br><br>
+
+</h3>
+</body>
+</html> 

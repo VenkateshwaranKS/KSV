@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+<title>Greedy Alogorithm</title>
+
+<link rel="stylesheet" type="text/css" href="ps-stylesheet.css" media="all">
+<style >h3{color:blue;}</style>
+<style >
+h1{
+    background-color:black;
+
+
+}
+body{
+    background-color:pink;
+    font-size: 18px;
+    color: black;
+}
+</style>
+</head>
+<body>
+<h1 style="color:white"><marquee scroll="left"><center>GREEDY ALGORITHM</center></marquee></h1>
+<p style="color:black">
+ Greedy algorithms are simple and straightforward. They are shortsighted in their approach in the sense that they take decisions on the basis of information at hand without worrying about the effect these decisions may have in the future. They are easy to invent, easy to implement and most of the time quite efficient. Many problems cannot be solved correctly by greedy approach. Greedy algorithms are used to solve optimization problems</p>
+<h2 style="color:red">Greedy Approach</h2>
+<h3 style="color:black">
+Greedy Algorithm works by making the decision that seems most promising at any moment; it never reconsiders this decision, whatever situation may arise later.<br><br>
+</h3>
+<h3 style="color:black">
+As an example consider the problem of "Making Change".<br><br>
+
+   <ul><li> Coins available are:</li>
+
+       <li> dollars (100 cents)</li>
+        <li>quarters (25 cents)</li>
+        <li>dimes (10 cents)</li>
+        <li>nickels (5 cents)</li>
+        <li>pennies (1 cent)</li>
+</ul>
+
+
+<h3 style="color:black">
+Problem    Make a change of a given amount using the smallest possible number of coins.<br>
+
+ 
+</h3>
+<h2 style=color:red>Informal Algorithm</h2><br>
+<h3 style="color:black">
+    Start with nothing.
+    at every stage without passing the given amount.
+        add the largest to the coins already chosen.<br><br>
+
+ </h3>
+
+<h2 style=color:red>Formal Algorithm</h2><br>
+<h3 style="color:black">
+
+Make change for n units using the least possible number of coins.<br><br>
+
+MAKE-CHANGE (n)<br><br>
+        C ← {100, 25, 10, 5, 1}     // constant.<br>
+        Sol ← {};                         // set that will hold the solution set.<br>
+        Sum ← 0 sum of item in solution set<br>
+        WHILE sum not = n<br>
+            x = largest item in set C such that sum + x ≤ n<br>
+            IF no such item THEN<br>
+                RETURN    "No Solution"<br>
+            S ← S {value of x}<br>
+            sum ← sum + x<br>
+        RETURN S<br><br>
+
+</h3>
+</body>
+</html>

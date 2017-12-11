@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>DFS & DFS</title>
+</head>
+<body>
+<h4><p>Depth First Search algorithm(DFS) traverses a graph in a depthward motion and uses a stack to remember to get the next vertex to start a search when a dead end occurs in any iteration.</p></h4>
+<h1>Depth First Travesal</h1><br><br>
+
+As in example given above, DFS algorithm traverses from A to B to C to D first then to E, then to F and lastly to G. It employs following rules.<br><br>
+
+    Rule 1 - Visit adjacent unvisited vertex. Mark it visited. Display it. Push it in a stack.<br><br>
+
+    Rule 2 - If no adjacent vertex found, pop up a vertex from stack. (It will pop up all the vertices from the stack which do not have adjacent vertices.)<br><br>
+
+    Rule 3 - Repeat Rule 1 and Rule 2 until stack is empty.<br><br>
+
+Traversal 	Description<br><br>
+
+STEP 1:Depth First Search Step One.Initialize the stack<br><br>
+
+STEP 2:	Depth First Search Step Two .Mark S as visited and put it onto the stack. Explore any unvisited adjacent node from S. We have three nodes and we can pick any of them. For this example, we shall take the node in alphabetical order.<br><br>
+
+STEP 3:Depth First Search Step Three .Mark A as visited and put it onto the stack. Explore any unvisited adjacent node from A. Both S and D are adjacent to A but we are concerned for unvisited nodes only.<br><br>
+
+STEP 4:	Depth First Search Step Four.Visit D and mark it visited and put onto the stack. Here we have B and C nodes which are adjacent to D and both are unvisited. But we shall again choose in alphabetical order.<br><br>
+
+STEP 5:Depth First Search Step Five .We choose B, mark it visited and put onto stack. Here B does not have any unvisited adjacent node. So we pop B from the stack.<br><br>
+
+STEP 6:Depth First Search Step Six.We check stack top for return to previous node and check if it has any unvisited nodes. Here, we find D to be on the top of stack.<br><br>
+
+STEP 7:Depth First Search Step Seven .Only unvisited adjacent node is from D is C now. So we visit C, mark it visited and put it onto the stack.<br><br>
+
+STEP 8:As C does not have any unvisited adjacent node so we keep popping the stack until we find a node which has unvisited adjacent node. In this case, there's none and we keep popping until stack is empty.<br><br>
+
+<h1>BREADTH FIRST TRAVERSAL</h1>
+<p>Breadth First Search algorithm(BFS) traverses a graph in a breadthwards motion and uses a queue to remember to get the next vertex to start a search when a dead end occurs in any iteration.</p>
+<h1>Breadth First Traversal</h1><br><br>
+
+As in example given above, BFS algorithm traverses from A to B to E to F first then to C and G lastly to D. It employs following rules.<br><br>
+
+    Rule 1 - Visit adjacent unvisited vertex. Mark it visited. Display it. Insert it in a queue.<br><br>
+
+    Rule 2 - If no adjacent vertex found, remove the first vertex from queue.<br><br>
+
+    Rule 3 - Repeat Rule 1 and Rule 2 until queue is empty.<br><br>
+
+Traversal 	Description<br><br>
+STEP 1:Breadth First Search Step One.Initialize the queue.<br><br>
+
+STEP 2:Breadth First Search Step Two.We start from visiting S (starting node), and mark it visited.<br><br>
+
+STEP 3:Breadth First Search Step Three.We then see unvisited adjacent node from S. In this example, we have three nodes but alphabetically we choose A mark it visited and enqueue it.<br><br>
+
+STEP 4:Breadth First Search Step Four 	Next unvisited adjacent node from S is B. We mark it visited and enqueue it.<br><br>
+
+STEP 5:Breadth First Search Step Five 	Next unvisited adjacent node from S is C. We mark it visited and enqueue it.<br><br>
+STEP 6:Breadth First Search Step Six 	Now S is left with no unvisited adjacent nodes. So we dequeue and find A.<br><br>
+STEP 7:Breadth First Search Step Seven 	From A we have D as unvisited adjacent node. We mark it visited and enqueue it.<br><br>
+
+At this stage we are left with no unmarked (unvisited) nodes. But as per algorithm we keep on dequeuing in order to get all unvisited nodes. When the queue gets emptied the program is over.<br><br>
+</body>
+</html>

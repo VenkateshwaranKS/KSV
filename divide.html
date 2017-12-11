@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+<title>DIVIDE AND CONQUER</title>
+<link rel="stylesheet" type="text/css" href="ps-stylesheet.css" media="all">
+<link rel="stylesheet" type="text/css" href="headercss.css" media="all">
+<style >
+h1{
+	background-color:black;
+
+}
+h3{
+	background-color:pink;
+	font-size: 20px;
+}	
+</style>
+</head>
+<body>
+<h1 style="color:white"><marquee scroll="left"><center>DIVIDE AND CONQUER</center></marquee></h1>
+
+Divide-and-conquer is a top-down technique for designing algorithms that consists of dividing the problem into smaller subproblems hoping that the solutions of the subproblems are easier to find and then composing the partial solutions into the solution of the original problem.<br>
+
+ 
+
+Little more formally, divide-and-conquer paradigm consists of following major phases:<br><br>
+
+    Breaking the problem into several sub-problems that are similar to the original problem but smaller in size,<br>
+    Solve the sub-problem recursively (successively and independently), and then<br>
+    Combine these solutions to subproblems to create a solution to the original problem.<br><br>
+ 
+<h2 style="color:blue">Binary Search (simplest application of divide-and-conquer)</h2><br><br>
+
+Binary Search is an extremely well-known instance of divide-and-conquer paradigm. Given an ordered array of n elements, the basic idea of binary search is that for a given element we "probe" the middle element of the array. We continue in either the lower or upper segment of the array, depending on the outcome of the probe until we reached the required (given) element.<br><br>
+
+
+
+Problem    Let A[1 . . . n] be an array of non-decreasing sorted order; that is A [i] ≤  A [j] whenever 1 ≤  i  ≤  j  ≤  n. Let 'q' be the query point. The problem consist of finding 'q' in the array A. If q is not in A, then find the position where 'q' might be inserted.<br><br>
+ 
+
+Formally, find the index i such that 1 ≤  i ≤  n+1 and A[i-1] < x ≤ A[i].<br><br>
+ 
+<h2 style="color:blue">Sequential Search</h2><br><br>
+
+Look sequentially at each element of A until either we reach at the end of an array A or find an item no smaller than 'q'.<br><br>
+
+Sequential search for 'q' in array A<br><br>
+
+            for i = 1 to n do<br>
+                if A [i] ≥ q then<br>
+                    return index i<br>
+                return n + 1<br>
+
+</body>
+</html> 

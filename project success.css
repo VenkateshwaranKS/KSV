@@ -1,0 +1,54 @@
+h1{
+font-size:40px;
+color:red;
+text-align:center;	}
+a{
+	background-color:cyan;
+	margin-bottom;
+	text-align-center;
+}
+p{
+	color:yellow;
+	text-align-center;
+}
+body {
+    font-family: Verdana,sans-serif;
+    font-size: 0.9em;
+}
+
+div#header, div#footer {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+div#content {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+div.article {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+div#menu ul {
+    padding: 0;
+}
+
+div#menu ul li {
+    display: inline;
+    margin: 5px;
+}
+.city {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+    border: 1px solid black;}
+ .bg{
+ 	background-image: url('index.png');}
+ }

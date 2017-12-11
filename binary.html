@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="ps-stylesheet.css" media="all">
+<style >
+h1{
+    background-color:black;
+
+}
+h3{
+    background-color:pink;
+}
+</style>
+</head>
+<body >
+<h3>
+<h1 style="color:white"><marquee scroll="left"><center>Binary Search tree </h1></center></marquee></h1> It
+is a binary tree in which each internal node x stores an element such that the element stored in the left subtree of x are less than or equal to x and elements stored in the right subtree of x are greater than or equal to x. This is called binary-search-tree property.<br><br>
+The basic operations on a binary search tree take time proportional to the height of the tree. For a complete binary tree with node n, such operations runs in (lg n) worst-case time. If the tree is a linear chain of n nodes, however, the same operations takes (n) worst-case time.<br><br>
+The height of the Binary Search Tree equals the number of links from the root node to the deepest node.<br><br>
+<h2 style="color:blue">Implementation of  Binary Search Tree</h2><br><br>
+Binary Search Tree can be implemented as a linked data structure in which each node is an object with three pointer fields. The three pointer fields left, right and p point to the nodes corresponding to the left child, right child and the parent respectively NIL in any pointer field signifies that there exists no corresponding child or parent. The root node is the only node in the BTS structure with NIL in its p field.<br><br>
+<h2 style="color:blue">Inorder Tree Walk</h2>
+During this type of walk, we visit the root of a subtree between the left subtree visit and right subtree visit.<br><br>
+
+            INORDER-TREE-WALK (x)<br><br>
+            If x NIL then<br><br>
+                INORDER-TREE-WALK (left[x])<br><br>
+                print key[x]<br><br>
+                INORDER-TREE-WALK (right[x])<br><br>
+
+It takes (n) time to walk a tree of n nodes. Note that the Binary Search Tree property allows us to print out all the elements in the Binary Search Tree in sorted order.<br><br>
+<h1>Preorder Tree Walk</h1><br><br>
+in which we visit the root node before the nodes in either subtree.<br><br>
+
+            PREORDER-TREE-WALK (x)<br><br>
+            If x not equal NIL then<br><br>
+                PRINT key[x]<br><br>
+                PREORDER-TREE-WALK (left[x])<br><br>
+                PREORDER-TREE-WALK (right[x])<br><br>
+
+ 
+<h1>
+ 
+Postorder Tree Walk
+</h1>
+In which we visit the root node after the nodes in its subtrees.<br><br>
+
+            POSTORDER-TREE-WALk (x)<br><br>
+            If x not equal NIL then<br><br>
+                POSTORDER-TREE-WALK (left[x])<br><br>
+                PREORDER-TREE-WALK (right[x])<br><br>
+                PRINT key [x]<br><br>
+
+It takes O(n) time to walk (inorder, preorder and  pastorder) a tree of n nodes.<br><br>
+
+ 
+</h3>
+</body>
+</html>

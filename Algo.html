@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sona Online Courses</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="ps-stylesheet.css" media="all">
+<link rel="stylesheet" type="text/css" href="headercss.css" media="all">
+<script type="text/javascript" src="ps-script.js"></script>
+</head>
+
+<body>
+<div align="center"><img src="index.png" alt="Sona">
+  <li style="float:right;color:blue;font-size:25px;"><h4>Welcome:<?php
+echo $login_session;?></h4>
+<a href="logout.php">LogOut</a></li>
+<!--<li style="float:right"><a href="login.php" > Student Login</a> |<a href="signup.php">Sign up</a></li>-->
+</div>
+<ul>
+  <li><a href="success.php">Home</a></li>
+  <li class="dropdown">
+    <a href="courses.html">Courses</a>
+    <div class="dropdown-content">
+      <a href="DS.php">Data Structure</a>
+      <a href="DAA.php">Data Analysis And Algorithm</a>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="online.html">Online Test</a>
+    <div class="dropdown-content">
+      <a href="dsQuiz.php">Data Structure</a>
+      <a href="daaQuiz.php">Data Analysis And Algorithm</a>
+    </div>
+  </li>
+  <li><a href="intro.html">Info</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="college.html">College Profile</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+
+<div style="float:left;width:20%;height:auto" class="scroll" >
+  <center><h1 style="color:black"><b>MENU</b></h1>
+  <a href="DS.php" >DS</a><br>
+  <a href="DAA.php">DAA</a><br>
+  <a href="quiz.php">Quiz</a><br>
+  <a href="cert.php">Certificate</a><br>
+</center>
+</div>
+
+<div style="float:left;width:50%;height:auto;">
+<fieldset>
+<h4><p>Algorithm is a step by step procedure, which defines a set of instructions to be executed in certain order to get the desired output. Algorithms are generally created independent of underlying languages, i.e. an algorithm can be implemented in more than one programming language.</p></h4>
+
+From data structure point of view, following are some important categories of algorithms -<br><br>
+
+
+    Search - Algorithm to search an item in a datastructure.<br><br>
+
+    Sort - Algorithm to sort items in certain order<br><br>
+
+    Insert - Algorithm to insert item in a datastructure<br><br>
+
+    Update - Algorithm to update an existing item in a data structure<br><br>
+  
+
+    Delete - Algorithm to delete an existing item from a data structure<br><br>
+
+<h4>Characteristics of an Algorithm</h4>
+
+Not all procedures can be called an algorithm. An algorithm should have the below mentioned characteristics -
+
+
+    Unambiguous - Algorithm should be clear and unambiguous. Each of its steps (or phases), and their input/outputs should be clear and must lead to only one meaning.<br><br>
+
+    Input - An algorithm should have 0 or more well defined inputs.<br><br>
+
+    Output - An algorithm should have 1 or more well defined outputs, and should match the desired output.<br><br>
+</body>
+</html>
